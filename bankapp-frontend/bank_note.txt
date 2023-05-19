@@ -1,0 +1,66 @@
+
+
+        Bank Application front-end
+
+1.Project Creation - ng new bankapp-frontend
+2.Run Angular project- ng s -o
+3.removing all code from app.component.html
+4.Includes 3rd party libraries - bootstrap,fontawesome,google fontawesome
+5 Creating components
+        1 Login - ng g c login
+        2 Registration - ng g c registration
+        3 Dashboard - ng g c dashboard
+        4 Transactions - ng g c transactions
+        5 Page not found - ng g c pageNotFound
+6.setup path for each component in app.routing.module.ts
+        {
+            path:'',component:LoginComponent
+        },
+        {
+            path:'register',component:RegistrationComponent
+        }
+
+7.Use router-outlet in app.component.html
+8.Design Each component
+9.Validation -Reactive forms module - app.module.ts
+   Angular forms
+      ->Model Driven forms 
+        eg:ReactiveFormsModule - To apply user input validations
+
+            1.Form Group
+            2.Form Array
+            3.Form Control
+    Add dependency Injection to ts file-FormBuilder
+
+10.create backend
+
+11.Integration
+
+    1.import HttpClientModule in app.module.ts
+    2.create services/api -ng g s services/api - create api call for  register 
+    3.api communicate with register component
+    
+
+     1.Register Integration
+     2.Login  Integration
+     3.Dashboard Design
+
+ 12.Token Verification
+   Token verification occurs when the client request after successfull login 
+
+   getBalance requst -1)Header - token
+                      2)Body - (url - acno)
+                      3)
+
+13)Middleware
+    control request - response cycle
+
+    fun(req,res,next){
+        
+    }
+    Types
+      1)Application specific Middleware - Execute Automatically..(backend- index.js)
+
+
+    2)Router specific Middleware - execute for a specific route (Here we use router specific)
+

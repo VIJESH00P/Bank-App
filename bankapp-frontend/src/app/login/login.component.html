@@ -1,0 +1,121 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light ">
+    <a class="navbar-brand" href="" style="color: white;">
+      <img src="https://th.bing.com/th?id=OIP.hmv5nRep_K7s7ZM8eWngdAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" height="30" width="30" alt="">
+     HDFT BANK
+    </a>
+  </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+          <!-- image -->
+          <img width="500px" class="mt-5" height="350px" src="https://www.bing.com/th/id/OIP.mmqGuCtPcQDj1lnnXNYPJAHaHL?w=182&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+
+        </div>
+        <div class="col-6">
+              <!-- form -->
+          <form [formGroup]="loginForm" (ngSubmit)="login()" class="border border-2 mt-5 p-5">
+            <h3 class="text-center mb-3">Login here</h3>
+              <div class="form-floating mb-3">
+                <input name="acno" formControlName="acno" type="text" class="form-control" id="floatingInput" placeholder="Account Number">
+                <label for="floatingInput">ACCOUNT NUMBER</label>
+
+                <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched " class="text-danger">Invalid Accountnumber</div>
+
+              </div>
+              <div class="form-floating">
+                <input name="password" formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+
+                <div *ngIf="this.loginForm.get('password')?.errors && this.loginForm.get('password')?.touched " class="text-danger">Invalid Password</div>
+
+              </div>
+
+              <!-- loginErrorMsg -->
+              <div class="text-danger fw-bold">{{loginErrorMsg}}</div>
+              <button  class="my-2" style="background-color: brown;color: white;">Sign In
+               <!-- spinner -->
+              <div *ngIf="loginSpinner" class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              </button>
+              
+              <a style="float: right;margin: 10px;text-decoration: none;" routerLink="register">New to here?Please Sign up</a>
+            </form>
+        </div>
+    </div>
+</div>
+<section class="footer">
+  <!-- Footer -->
+  <footer class=" text-white text-center my-3">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Footer Content</h5>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</section>

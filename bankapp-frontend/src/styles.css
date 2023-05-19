@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel&family=Lato:wght@300&family=Nunito+Sans:wght@200&family=Prosto+One&family=Roboto+Slab:wght@200&family=Roboto:wght@300&family=Rubik+Vinyl&family=Source+Sans+Pro:wght@300&display=swap');
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
